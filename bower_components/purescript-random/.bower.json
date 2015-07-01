@@ -1,30 +1,38 @@
 {
   "name": "purescript-random",
   "homepage": "https://github.com/purescript/purescript-random",
-  "description": "Random number generation",
+  "description": "Random value generation",
   "keywords": [
     "purescript"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/purescript/purescript-random.git"
+  },
   "ignore": [
     "**/.*",
     "bower_components",
     "node_modules",
     "output",
-    "tests",
-    "tmp",
+    "test",
     "bower.json",
-    "Gruntfile.js",
+    "gulpfile.js",
     "package.json"
   ],
-  "version": "0.1.1",
-  "_release": "0.1.1",
+  "dependencies": {
+    "purescript-eff": "^0.1.0",
+    "purescript-integers": "^0.2.0",
+    "purescript-math": "^0.2.0"
+  },
+  "version": "0.2.0",
+  "_release": "0.2.0",
   "_resolution": {
     "type": "version",
-    "tag": "v0.1.1",
-    "commit": "4c25ed32cf2efd9635cd10ddf081555f6d997d3d"
+    "tag": "v0.2.0",
+    "commit": "20f7ad46472a6f2b89e86db8008f46a1f662a711"
   },
   "_source": "git://github.com/purescript/purescript-random.git",
-  "_target": "*",
+  "_target": "^0.2.0",
   "_originalSource": "purescript-random"
 }

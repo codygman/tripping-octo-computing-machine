@@ -1,12 +1,15 @@
-# Module Documentation
+# purescript-random
 
-## Module Control.Monad.Eff.Random
+[![Build Status](https://travis-ci.org/purescript/purescript-random.svg?branch=master)](https://travis-ci.org/purescript/purescript-random)
 
-### Types
+Random value generation.
 
-    data Random :: !
+## Installation
 
+```
+bower install purescript-random
+```
 
-### Values
+## Module documentation
 
-    random :: forall e. Eff (random :: Random | e) Prim.Number
+- [Control.Monad.Eff.Random](docs/Control.Monad.Eff.Random.md)

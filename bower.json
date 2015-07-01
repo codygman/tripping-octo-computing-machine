@@ -1,8 +1,8 @@
 {
-  "name": "purescript-web-dev-example",
-  "version": "0.0.0",
+  "name": "validator",
+  "version": "0.0.1",
   "authors": [
-    "Curtis Gagliardi <curtis@curtis.io>"
+    "Cody Goodman <email@email.com>"
   ],
   "license": "MIT",
   "ignore": [
@@ -13,6 +13,17 @@
     "tests"
   ],
   "dependencies": {
-    "purescript-random": "*"
+    "purescript-random": "^0.2.0",
+    "purescript-jquery": "^0.5.0",
+    "purescript-maps": "^0.4.0",
+    "purescript-sets": "^0.4.0",
+    "purescript-arrays": "^0.4.0",
+    "purescript-control": "^0.3.0",
+    "purescript-exceptions": "^0.3.0",
+    "purescript-globals": "^0.2.0",
+    "purescript-strings": "^0.5.0",
+    "purescript-simple-dom": "file:///home/cody/programming/purescript/purescript-simple-dom/.git/#master",
+    "purescript-foldable-traversable": "^0.4.0",
+    "purescript-jquery": "^0.5.0"
   }
 }

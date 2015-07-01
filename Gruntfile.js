@@ -3,10 +3,15 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
 
+    libFiles: [
+      "src/**/*.purs",
+      "bower_components/purescript-*/src/**/*.purs"
+    ],
+
     psc: {
       options: {
-        main: "Example.Main",
-        modules: ["Example.Main"]
+        main: "Validator.Main",
+        modules: ["Validator.Main"]
       },
       all: {
         src: [ "src/**/*.purs"
@@ -14,6 +19,7 @@ module.exports = function(grunt) {
         dest: "dist/example.js"
       }
     },
+    dotPsci: ["<%=libFiles%>"],
     watch: {
       files: [ "src/**/*.purs"
              , "bower_components/**/src/**/*.purs"],
@@ -24,5 +30,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks("grunt-purescript");
 
-  grunt.registerTask("default", ["psc:all"]);
+  grunt.registerTask("default", ["psc:all","dotPsci"]);
 };

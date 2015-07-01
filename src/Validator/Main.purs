@@ -1,14 +1,15 @@
 module Validator.Main where
 
+import Prelude
 import Control.Bind
 import Control.Monad.Eff
-import Debug.Trace
+import Control.Monad.Eff.Console
 import Data.DOM.Simple.Document
 import Data.DOM.Simple.Element
 import Data.DOM.Simple.Window
 import Data.DOM.Simple.Types
 import Data.Traversable
-import qualified Control.Monad.JQuery as J
+import qualified Control.Monad.Eff.JQuery as J
 import Validator.Actions
 import Validator.Validators
 import Data.Foldable

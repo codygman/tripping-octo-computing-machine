@@ -1,8 +1,9 @@
 module Validator.Validators where
 
+import Prelude
 import Data.Foldable
 import Global
-import Data.Array (map)
+-- import Data.Array (map)
 import Data.String
 
 isDigit :: String -> Boolean

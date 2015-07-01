@@ -1,13 +1,15 @@
 module Validator.Actions where
 
+import Prelude
 import Control.Monad.Eff
 import Data.Either
 import Data.Foreign
 import Control.Monad
+import DOM
 import Data.DOM.Simple.Element
 import Data.DOM.Simple.Events
 import Data.DOM.Simple.Types
-import qualified Control.Monad.JQuery as J
+import qualified Control.Monad.Eff.JQuery as J
 
 ($.) :: forall eff. String -> Eff (dom :: DOM.DOM | eff) J.JQuery
 ($.) = J.select
@@ -25,8 +27,8 @@ validate :: forall t . (String -> Boolean)
 validate validator input = do
   inputValue <- liftM1 (fromEither "") (readString <$> J.getValue input)
   let valid = validator $ inputValue
-  J.toggleClass' "invalid" (not valid) input
-  J.toggleClass' "valid" valid input
+  J.setClass "invalid" (not valid) input
+  J.setClass "valid" valid input
 
 toggleValid :: forall t. HTMLElement -> Eff (dom :: DOM | t) Unit
 toggleValid input = do
